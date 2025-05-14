@@ -1,7 +1,5 @@
-public class Utilisateur
-{
-    public static void main(String[] args)
-    {
+public class Utilisateur {
+    public static void main(String[] args) {
         Societe societe1 = new SocieteSansFiliale();
         societe1.ajouteVehicule();
 
@@ -10,12 +8,13 @@ public class Utilisateur
         societe2.ajouteVehicule();
 
         Societe groupe = new SocieteMere();
+        groupe.ajouteVehicule();
         groupe.ajouteFiliale(societe1);
         groupe.ajouteFiliale(societe2);
-        groupe.ajouteVehicule();
 
         System.out.println(
-                "Coût d'entretien total du groupe : " +
-                        groupe.calculeCoutEntretien());
+                "Coût d’entretien total du groupe : "
+                        + groupe.calculeCoutEntretien()
+        );
     }
 }
